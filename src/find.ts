@@ -14,7 +14,11 @@ const main = async () => {
       id: 15,
     },
   });
-
+  const findUnique = await prisma.post.findUniqueOrThrow({
+    where: {
+      id: 15,
+    },
+  });
   console.log(findFirst);
 };
 
