@@ -14,7 +14,7 @@ datasource db {
 }
 
 
-model Post {
+model post {
   id Int @id @default(autoincrement())
   title String
   content String
