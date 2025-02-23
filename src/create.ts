@@ -30,7 +30,13 @@ const main = async () => {
       {
         title: "Hello World Now3",
         content: "This is a test post3",
-        authorName: "Alice3",
+        authorName: "Alice4",
+        published: false,
+      },
+      {
+        title: "Hello World Now3",
+        content: "This is a test post3",
+        authorName: "Alice4",
         published: false,
       },
     ],
