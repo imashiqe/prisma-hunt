@@ -24,6 +24,24 @@ const main = async () => {
   //   },
   // });
   // console.log(createCategory);
+  // const createPost = await prisma.post.create({
+  //   data: {
+  //     title: "Software Engineering",
+  //     content: "Software Engineering is the best",
+  //     published: true,
+  //     authorId: 1,
+  //     postCategory: {
+  //       create: {
+  //         category: {
+  //           connect: {
+  //             id: 1,
+  //           },
+  //         },
+  //       },
+  //     },
+  //   },
+  // });
+  // console.log(createPost);
 };
 
 main();
