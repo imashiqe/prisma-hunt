@@ -41,6 +41,9 @@ const main = async () => {
   //     },
   //   },
   // });
+  // include: {
+  //   postCategory: true;
+  // };
   // console.log(createPost);
 };
 
