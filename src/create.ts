@@ -1,48 +1,16 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, UserRole } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
 const main = async () => {
-  //   const result = await prisma.post.create({
-  //     data: {
-  //       title: "Hello World Now",
-  //       content: "This is a test post",
-  //       authorName: "Alice",
-  //       published: false,
-  //     },
-  //   });
-  //   console.log(result);
-
-  const createMany = await prisma.post.createMany({
-    data: [
-      {
-        title: "Hello World Now",
-        content: "This is a test post",
-        authorName: "Alice",
-        published: false,
-      },
-      {
-        title: "Hello World Now2",
-        content: "This is a test post2",
-        authorName: "Alice2",
-        published: false,
-      },
-      {
-        title: "Hello World Now3",
-        content: "This is a test post3",
-        authorName: "Alice4",
-        published: false,
-      },
-      {
-        title: "Hello World Now3",
-        content: "This is a test post3",
-        authorName: "Alice4",
-        published: false,
-      },
-    ],
+  const createUser = await prisma.user.create({
+    data: {
+      username: "fahim2",
+      email: "fahim@gmail.com",
+      role: UserRole.user,
+    },
   });
-
-  console.log(createMany);
+  console.log(createUser);
 };
 
 main();
