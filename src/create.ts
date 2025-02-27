@@ -11,14 +11,19 @@ const main = async () => {
   //   },
   // });
   // console.log(createUser);
-
-  const createProfile = await prisma.profile.create({
-    data: {
-      bio: "I am a developer:",
-      userId: 1,
-    },
-  });
-  console.log(createProfile);
+  // const createProfile = await prisma.profile.create({
+  //   data: {
+  //     bio: "I am a developer:",
+  //     userId: 1,
+  //   },
+  // });
+  // console.log(createProfile);
+  // const createCategory = await prisma.category.create({
+  //   data: {
+  //     name: "Software Engineering",
+  //   },
+  // });
+  // console.log(createCategory);
 };
 
 main();
