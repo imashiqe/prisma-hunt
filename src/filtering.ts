@@ -17,6 +17,7 @@ const filtering = async () => {
       ],
     },
   });
+  await getInDepthData();
 };
 
 const notFiltering = async () => {
@@ -49,6 +50,16 @@ const endWith = async () => {
       email: {
         startsWith: "fahim",
       },
+    },
+  });
+};
+const getInDepthData = async () => {
+  return await prisma.user.findMany({
+    where: {
+      id: 3,
+    },
+    include: {
+      posts: true,
     },
   });
 };
