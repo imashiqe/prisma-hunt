@@ -33,17 +33,30 @@ const notFiltering = async () => {
   });
 };
 
-const startsWith = await prisma.user.findMany({
-  where: {
-    email: {
-      startsWith: "fahim",
+const startsWith = async () => {
+  return await prisma.user.findMany({
+    where: {
+      email: {
+        startsWith: "fahim",
+      },
     },
-  },
-});
+  });
+};
+
+const endWith = async () => {
+  return await prisma.user.findMany({
+    where: {
+      email: {
+        startsWith: "fahim",
+      },
+    },
+  });
+};
 
 const runFilters = async () => {
   await filtering();
   await notFiltering();
+  await startsWith();
 };
 
 runFilters();
