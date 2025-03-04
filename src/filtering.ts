@@ -19,4 +19,23 @@ const filtering = async () => {
   });
 };
 
-filtering();
+const notFiltering = async () => {
+  return await prisma.post.findMany({
+    where: {
+      NOT: [
+        {
+          title: {
+            contains: "Software",
+          },
+        },
+      ],
+    },
+  });
+};
+
+const runFilters = async () => {
+  await filtering();
+  await notFiltering();
+};
+
+runFilters();
